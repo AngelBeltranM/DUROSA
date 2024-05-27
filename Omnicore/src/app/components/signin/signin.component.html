@@ -1,0 +1,81 @@
+<section class="py-3 py-md-5 py-xl-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-5">
+          <h2 class="display-5 fw-bold text-center">Durosa Sistemas</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+        <div class="row gy-5 justify-content-center">
+          <div class="col-12 col-lg-5">
+            <!--Formulario inicio de sesion -->
+            <form (submit)="signIn()">
+              <div class="row gy-3 overflow-hidden">
+                <div class="col-12">
+
+                  <div class="form-floating mb-3">
+                    <input [(ngModel)]="user.email" type="email" class="form-control border-0 border-bottom rounded-0"
+                      name="email" id="email" placeholder="name@example.com" required>
+                    <label for="email" class="form-label">Usuario o Correo</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating mb-3">
+                    <input [(ngModel)]="user.password" type="password"
+                      class="form-control border-0 border-bottom rounded-0" name="password" id="password" value=""
+                      placeholder="Password" required>
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row justify-content-between">
+
+                    <div class="">
+                      <div class="text">
+                        <a href="#!" class="link-secondary">¿Olvidaste tu contraseña?</a>
+                      </div>
+                    </div>
+                    <div class="mt-2">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-none">Empleado</button>
+                        <button type="button" class="btn btn-none dropdown-toggle dropdown-toggle-split"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" routerLink="/signin">Empleado</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" routerLink="/admin">Administrador</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button class="btn btn-lg btn-dark rounded-0 fs-6" type="submit">Iniciar sesion</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center gap-3 flex-lg-column">
+            <div class="bg-dark h-100 d-none d-lg-block" style="width: 1px; --bs-bg-opacity: .1;"></div>
+            <div class="bg-dark w-100 d-lg-none" style="height: 1px; --bs-bg-opacity: .1;"></div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <p>Este sitema de ERP consiste en un conjunto de aplicaciones o módulos integrados para gestionar los
+              procesos de una empresa
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
