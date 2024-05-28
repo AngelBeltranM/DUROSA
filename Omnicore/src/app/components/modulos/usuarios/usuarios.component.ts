@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ApiServiceService } from '../../services/api-service.service';
+import { ApiServiceService } from '../../../services/api-service.service';
 import { Router } from '@angular/router';
-import { Usuarios, Usuarios1 } from '../../Models/ListUsers';
+import { Usuarios, Usuarios1 } from '../../../Models/ListUsers';
 import { Toast, ToastrService } from 'ngx-toastr';
 
 

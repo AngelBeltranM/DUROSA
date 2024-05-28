@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApiServiceService } from '../../services/api-service.service';
+import { ApiServiceService } from '../../../../services/api-service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Usuarios, Usuarios1 } from '../../Models/ListUsers';
+import { Usuarios, Usuarios1 } from '../../../../Models/ListUsers';
 
 @Component({
   selector: 'app-edit-user',
