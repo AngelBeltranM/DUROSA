@@ -1,22 +1,29 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'app-rh',
-  templateUrl: './rh.component.html',
-  styleUrl: './rh.component.css'
+  selector: 'app-formato-altas',
+  templateUrl: './formato-altas.component.html',
+  styleUrl: './formato-altas.component.css'
 })
-export class RhComponent {
+export class FormatoAltasComponent {
   currentDate?: string;
+  constructor(private router: Router) {}
 
-
-  constructor() {
-    
-  }
   ngOnInit(): void {
     this.currentDate = this.getFormattedDate();
   }
 
- 
+  regresar() {
+    const token = localStorage.getItem('token');
+
+    if(!token){
+      this.router.navigate(['/menu-admin']);
+    }else {
+      this.router.navigate(['/menu']);
+    }
+  }
 
   getFormattedDate(): string {
     const date = new Date();
@@ -26,4 +33,7 @@ export class RhComponent {
     return `${day}/${month}/${year}`;
   }
 
+
 }
+
+

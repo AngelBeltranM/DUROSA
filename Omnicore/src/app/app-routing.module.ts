@@ -8,8 +8,8 @@ import { SignAdminComponent } from './components/auth/sign-admin/sign-admin.comp
 import { MenuAdminComponent } from './components/menus/menu-admin/menu-admin.component';
 import { authadminGuard } from './guards/authadmin.guard';
 import { EditUserComponent } from './components/modulos/usuarios/edit-user/edit-user.component';
-
-import { RhComponent } from './components/modulos/rh/rh.component';
+import { RhComponent } from './components/modulos/RH/rh/rh.component';
+import { FormatoAltasComponent } from './components/modulos/RH/formato-altas/formato-altas.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full'},
@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'admin', component: SignAdminComponent },
   { path: 'menu-admin', component: MenuAdminComponent, canActivate: [authadminGuard]},
   { path: 'edit-user/:id', component: EditUserComponent, canActivate: [authadminGuard]},
-  { path: 'app-rh', component: RhComponent }
+  { path: 'app-rh', component: RhComponent },
+  { path: 'formato', component: FormatoAltasComponent}
 ];
 
 @NgModule({
