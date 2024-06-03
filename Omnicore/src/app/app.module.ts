@@ -6,14 +6,15 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SigninComponent } from './components/signin/signin.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import { MenuComponent } from './components/menus/menu/menu.component';
+import { UsuariosComponent } from './components/modulos/usuarios/usuarios.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { SignAdminComponent } from './components/sign-admin/sign-admin.component';
-import { MenuAdminComponent } from './components/menu-admin/menu-admin.component';
-import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { SignAdminComponent } from './components/auth/sign-admin/sign-admin.component';
+import { MenuAdminComponent } from './components/menus/menu-admin/menu-admin.component';
+import { EditUserComponent } from './components/modulos/usuarios/edit-user/edit-user.component';
+import { RhComponent } from './components/modulos/rh/rh.component';
 
 
 
@@ -25,9 +26,9 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     MenuComponent,
     UsuariosComponent,
     SignAdminComponent,
+    EditUserComponent,
     MenuAdminComponent,
-    EditUserComponent
-    
+    RhComponent
   ],
   imports: [
     BrowserModule,
