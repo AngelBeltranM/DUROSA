@@ -8,13 +8,27 @@
         <article class="postcard light blue">
             <form class="postcard__text">
 
+                <div class="position-relative">
+
+                    <div class="position-absolute top-0 start-0 translate-middle" style="margin-left: 35px; margin-top: 10px;"> 
+                        <img src="../assets/img/durosa.png" alt="logo" style="width: 100px; height: 100px; padding-top: 10px;">
+                    </div>
+                    
+                    <div class="position-absolute top-0 start-50 translate-middle">
+                        <h1 class="postcard__title text-center blue text-dark">INFORMACION - ALTA </h1>
+                    </div>
 
 
-                <h1 class="postcard__title text-center blue text-dark">INFORMACION - ALTA </h1>
+                    <div class="position-absolute top-0 start-100 translate-middle time text-dark" style="padding-right: 125px; padding-top: 50px;">
+                        {{currentDate}}
+                    </div>
 
-                {{currentDate}}
-
-                <h4 class="text-center text-dark">DATOS DEL PERSONAL</h4>
+                </div>
+ 
+                <div class="mt-5">
+                    <h4 class="text-center text-dark">DATOS DEL PERSONAL</h4>
+                </div>
+                
 
                 <div class="d-flex">
                     <div class="p-2  flex-fill">
