@@ -6,43 +6,46 @@
     <div class="container py-4">
         <!--FORMATO DE CONTRATO -->
         <article class="postcard light blue">
-            <form class="postcard__text">
+            <form class="postcard__text" [formGroup]="form">
 
                 <div class="position-relative">
 
-                    <div class="position-absolute top-0 start-0 translate-middle" style="margin-left: 35px; margin-top: 10px;"> 
-                        <img src="../assets/img/durosa.png" alt="logo" style="width: 100px; height: 100px; padding-top: 10px;">
+                    <div class="position-absolute top-0 start-0 translate-middle"
+                        style="margin-left: 35px; margin-top: 10px;">
+                        <img src="../assets/img/durosa.png" alt="logo"
+                            style="width: 100px; height: 100px; padding-top: 10px;">
                     </div>
-                    
-                    <div class="position-absolute top-0 start-50 translate-middle">
+
+                    <div class="position-absolute top-0 start-50 translate-middle mt-5">
                         <h1 class="postcard__title text-center blue text-dark">INFORMACION - ALTA </h1>
                     </div>
 
 
-                    <div class="position-absolute top-0 start-100 translate-middle time text-dark" style="padding-right: 125px; padding-top: 50px;">
+                    <div class="position-absolute top-0 start-100 translate-middle time text-dark"
+                        style="padding-right: 125px; padding-top: 50px;">
                         {{currentDate}}
                     </div>
 
                 </div>
- 
+
                 <div class="mt-5">
-                    <h4 class="text-center text-dark">DATOS DEL PERSONAL</h4>
+                    <h4 class="text-center text-dark mt-5">DATOS DEL PERSONAL</h4>
                 </div>
-                
+
 
                 <div class="d-flex">
                     <div class="p-2  flex-fill">
                         <div class="form-group text-dark">
                             <label for="nombre">Nombre</label>
                             <input type="text" class="form-control mx-auto" id="nombre" aria-describedby="Nombre"
-                                placeholder="Nombre">
+                                placeholder="Nombre" formControlName="NOMBRE">
                         </div>
                     </div>
                     <div class="p-2  flex-fill">
                         <div class="form-group text-dark">
                             <label for="puesto">Puesto</label>
                             <input type="text" class="form-control mx-auto" id="puesto" aria-describedby="Puesto"
-                                placeholder="Ingresa el puesto">
+                                placeholder="Ingresa el puesto" formControlName="PUESTO">
                         </div>
                     </div>
 
@@ -50,7 +53,7 @@
                         <div class="form-group text-dark">
                             <label for="direccion">Dirección</label>
                             <input type="text" class="form-control mx-auto" id="direccion" aria-describedby="direccion"
-                                placeholder="Ingrese su dirección">
+                                placeholder="Ingrese su dirección" formControlName="DIRECCION">
                         </div>
                     </div>
                 </div>
@@ -62,7 +65,8 @@
                         <div class="form-group text-dark">
                             <label for="Telefono_casa">Telefono de casa</label>
                             <input type="text" class="form-control mx-auto" id="Telefono_casa"
-                                aria-describedby="Telefono_casa" placeholder="Ingrese su telefono de casa">
+                                aria-describedby="Telefono_casa" placeholder="Ingrese su telefono de casa"
+                                formControlName="TELEFONO_CASA">
                         </div>
                     </div>
 
@@ -70,7 +74,7 @@
                         <div class="form-group text-dark">
                             <label for="Celular">Numero de celular</label>
                             <input type="text" class="form-control mx-auto" id="Celular" aria-describedby="Celular"
-                                placeholder="Ingrese su numero de celular">
+                                placeholder="Ingrese su numero de celular" formControlName="CELULAR">
                         </div>
                     </div>
 
@@ -78,7 +82,8 @@
                         <div class="form-group text-dark">
                             <label for="Telefono_recados">Telefono recados</label>
                             <input type="text" class="form-control mx-auto" id="Telefono_recados"
-                                aria-describedby="Telefono_recados" placeholder="Ingrese su telefono de recados">
+                                formControlName="TELEFONO_RECADOS" aria-describedby="Telefono_recados"
+                                placeholder="Ingrese su telefono de recados">
                         </div>
                     </div>
 
@@ -90,7 +95,7 @@
                         <div class="form-group text-dark">
                             <label for="email">Correo</label>
                             <input type="text" class="form-control mx-auto" id="email" aria-describedby="email"
-                                placeholder="Ingrese su correo">
+                                formControlName="EMAIL" placeholder="Ingrese su correo">
                         </div>
                     </div>
 
@@ -98,7 +103,8 @@
                         <div class="form-group text-dark">
                             <label for="estado_civil">Estado Civil</label>
                             <input type="text" class="form-control mx-auto" id="estado_civil"
-                                aria-describedby="estado_civil" placeholder="Ingrese su estado civil">
+                                formControlName="ESTADO_CIVIL" aria-describedby="estado_civil"
+                                placeholder="Ingrese su estado civil">
                         </div>
                     </div>
 
@@ -107,7 +113,7 @@
                         <div class="form-group text-dark">
                             <label for="Telefono_casa">Fecha de nacimiento</label>
                             <input class="form-control mx-auto" id="fecha_nacimiento" type="date" name="trip-start"
-                                min="1980-01-01" max="2024-12-31" />
+                                formControlName="FECHA_NACIMIENTO" min="1980-01-01" max="2024-12-31" />
                         </div>
                     </div>
                 </div>
@@ -116,7 +122,7 @@
                         <div class="form-group text-dark">
                             <label for="clinica">Clinica</label>
                             <input type="text" class="form-control mx-auto" id="clinica" aria-describedby="clinica"
-                                placeholder="Ingrese su clinica">
+                                formControlName="CLINICA" placeholder="Ingrese su clinica">
                         </div>
                     </div>
 
@@ -124,7 +130,7 @@
                         <div class="form-group text-dark">
                             <label for="imss">IMSS</label>
                             <input type="text" class="form-control mx-auto" id="imss" aria-describedby="imss"
-                                placeholder="Ingrese su numero del imss">
+                                formControlName="IMSS" placeholder="Ingrese su numero del imss">
                         </div>
                     </div>
                 </div>
@@ -134,7 +140,7 @@
                         <div class="form-group text-dark">
                             <label for="CURP">CURP</label>
                             <input type="text" class="form-control mx-auto" id="CURP" aria-describedby="CURP"
-                                placeholder="Ingrese su curp">
+                                formControlName="CURP" placeholder="Ingrese su curp">
                         </div>
                     </div>
 
@@ -142,7 +148,7 @@
                         <div class="form-group text-dark">
                             <label for="RFC">RFC</label>
                             <input type="text" class="form-control mx-auto" id="RFC" aria-describedby="RFC"
-                                placeholder="Ingrese su RFC">
+                                formControlName="RFC" placeholder="Ingrese su RFC">
                         </div>
                     </div>
                 </div>
@@ -155,14 +161,15 @@
                         <div class="form-group text-dark">
                             <label for="nombre_hijo1">Nombre del primer hijo</label>
                             <input type="text" class="form-control mx-auto" id="nombre_hijo1"
-                                aria-describedby="nombre_hijo1" placeholder="Ingrese el nombre">
+                                formControlName="NOMBRE_HIJO1" aria-describedby="nombre_hijo1"
+                                placeholder="Ingrese el nombre">
                         </div>
                     </div>
                     <div class="p-2  flex-fill">
                         <div class="form-group text-dark">
                             <label for="Telefono_casa">Fecha de nacimiento</label>
                             <input class="form-control mx-auto" id="fecha_nacimiento" type="date" name="trip-start"
-                                min="1980-01-01" max="2024-12-31" />
+                                formControlName="FECHA_NACIMIENTO1" min="1980-01-01" max="2024-12-31" />
                         </div>
                     </div>
                 </div>
@@ -172,14 +179,15 @@
                         <div class="form-group text-dark">
                             <label for="nombre_hijo2">Nombre del segundo hijo</label>
                             <input type="text" class="form-control mx-auto" id="nombre_hijo2"
-                                aria-describedby="nombre_hijo2" placeholder="Ingrese el nombre">
+                                formControlName="NOMBRE_HIJO2" aria-describedby="nombre_hijo2"
+                                placeholder="Ingrese el nombre">
                         </div>
                     </div>
                     <div class="p-2  flex-fill">
                         <div class="form-group text-dark">
                             <label for="Telefono_casa">Fecha de nacimiento</label>
                             <input class="form-control mx-auto" id="fecha_nacimiento" type="date" name="trip-start"
-                                min="1980-01-01" max="2024-12-31" />
+                                formControlName="FECHA_NACIMIENTO2" min="1980-01-01" max="2024-12-31" />
                         </div>
                     </div>
                 </div>
@@ -189,14 +197,15 @@
                         <div class="form-group text-dark">
                             <label for="nombre_hijo3">Nombre del tercer hijo</label>
                             <input type="text" class="form-control mx-auto" id="nombre_hijo3"
-                                aria-describedby="nombre_hijo3" placeholder="Ingrese el nombre">
+                                formControlName="NOMBRE_HIJO3" aria-describedby="nombre_hijo3"
+                                placeholder="Ingrese el nombre">
                         </div>
                     </div>
                     <div class="p-2  flex-fill">
                         <div class="form-group text-dark">
                             <label for="Telefono_casa">Fecha de nacimiento</label>
                             <input class="form-control mx-auto" id="fecha_nacimiento" type="date" name="trip-start"
-                                min="1980-01-01" max="2024-12-31" />
+                                formControlName="FECHA_NACIMIENTO3" min="1980-01-01" max="2024-12-31" />
                         </div>
                     </div>
                 </div>
@@ -204,11 +213,27 @@
                 <h1 class="postcard__title text-center blue text-dark">DATOS INFONAVIT</h1>
 
                 <div class="d-flex">
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                            formControlName="DESCUENTO_in">
+                        <label class="form-check-label text-dark" for="inlineRadio1">Descuento</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"
+                            formControlName="VSM">
+                        <label class="form-check-label text-dark" for="inlineRadio2">VSM (Veces Salario Minimo)
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="d-flex">
                     <div class="p-2  flex-fill">
                         <div class="form-group text-dark">
                             <label for="Descuento">Descuento</label>
                             <input type="text" class="form-control mx-auto" id="Descuento" aria-describedby="Descuento"
-                                placeholder="Ingrese su descuento">
+                                formControlName="DESCUENTO" placeholder="Ingrese su descuento">
                         </div>
                     </div>
 
@@ -216,7 +241,7 @@
                         <div class="form-group text-dark">
                             <label for="folio">Folio</label>
                             <input type="text" class="form-control mx-auto" id="folio" aria-describedby="folio"
-                                placeholder="Ingrese su folio">
+                                formControlName="FOLIO" placeholder="Ingrese su folio">
                         </div>
                     </div>
                 </div>
@@ -228,7 +253,8 @@
                         <div class="form-group text-dark">
                             <label for="Grupo_Sanguineo">Grupo Sanguineo</label>
                             <input type="text" class="form-control mx-auto" id="Grupo_Sanguineo"
-                                aria-describedby="Grupo_Sanguineo" placeholder="Ingrese su grupo sanguineo">
+                                formControlName="GRUPO_SANGUINEO" aria-describedby="Grupo_Sanguineo"
+                                placeholder="Ingrese su grupo sanguineo">
                         </div>
                     </div>
 
@@ -236,7 +262,7 @@
                         <div class="form-group text-dark">
                             <label for="Alergias">Alergias</label>
                             <input type="text" class="form-control mx-auto" id="Alergias" aria-describedby="Alergias"
-                                placeholder="¿que tipo de alergia?">
+                                formControlName="ALERGIAS" placeholder="¿que tipo de alergia?">
                         </div>
                     </div>
 
@@ -244,7 +270,8 @@
                         <div class="form-group text-dark">
                             <label for="Padecimientos">Padecimientos</label>
                             <input type="text" class="form-control mx-auto" id="Padecimientos"
-                                aria-describedby="Padecimientos" placeholder="tipo de padecimiento">
+                                formControlName="PADECIMIENTOS" aria-describedby="Padecimientos"
+                                placeholder="tipo de padecimiento">
                         </div>
                     </div>
 
@@ -257,7 +284,8 @@
                         <div class="form-group text-dark">
                             <label for="talla_playera">Talla de playera</label>
                             <input type="text" class="form-control mx-auto" id="talla_playera"
-                                aria-describedby="talla_playera" placeholder="Tamaño playera">
+                                formControlName="TALLA_PLAYERA" aria-describedby="talla_playera"
+                                placeholder="Tamaño playera">
                         </div>
                     </div>
 
@@ -265,7 +293,8 @@
                         <div class="form-group text-dark">
                             <label for="talla_pantalon">Talla pantalon</label>
                             <input type="text" class="form-control mx-auto" id="talla_pantalon"
-                                aria-describedby="talla_pantalon" placeholder="Tamaño pantalon">
+                                formControlName="TALLA_PANTALON" aria-describedby="talla_pantalon"
+                                placeholder="Tamaño pantalon">
                         </div>
                     </div>
 
@@ -273,23 +302,41 @@
                         <div class="form-group text-dark">
                             <label for="talla_zapatos">Talla zapato</label>
                             <input type="text" class="form-control mx-auto" id="talla_zapatos"
-                                aria-describedby="talla_zapatos" placeholder="numero de zapatos">
+                                formControlName="TALLA_ZAPATO" aria-describedby="talla_zapatos"
+                                placeholder="numero de zapatos">
                         </div>
                     </div>
 
                 </div>
 
                 <div class="btn-container">
-                    <button type="submit" class="btn btn-success" style="width: 250px; height: 50px;">
+                    <button (click)="generatePDF()" type="submit" class="btn btn-success" style="width: 250px; height: 50px;">
                         Guardar y Generar PDF
                     </button>
+
+                  
                 </div>
-               
 
             </form>
 
 
-
+            <!-- Modal para la vista previa del PDF -->
+            <div class="modal fade" id="pdfPreviewModal" tabindex="-1" aria-labelledby="pdfPreviewModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="pdfPreviewModalLabel">Vista Previa del PDF</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <iframe id="pdfPreviewIframe" style="width:100%; height:500px;"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
         </article>
 
