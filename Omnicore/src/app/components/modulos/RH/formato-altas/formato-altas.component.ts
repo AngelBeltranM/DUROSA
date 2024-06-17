@@ -164,7 +164,7 @@ export class FormatoAltasComponent {
     document.body.appendChild(pdfContent);
 
     const canvas = await html2canvas(pdfContent, { scale: 3, useCORS: true });
-    const imgData = canvas.toDataURL('image/png');
+    const imgData = canvas.toDataURL('image/jpeg', 0.7);
 
     const pdf = new jsPDF({
       orientation: 'portrait',  // Orientación del papel: 'portrait' (vertical) o 'landscape' (horizontal)
@@ -175,26 +175,22 @@ export class FormatoAltasComponent {
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
 
+
     // Redimensionar la imagen para que se ajuste al tamaño de la página del PDF y centrarla
-    const canvasWidth = canvas.width / 2;
-    const canvasHeight = canvas.height / 2;
-    const ratio = Math.min(pdfWidth / canvasWidth, pdfHeight / canvasHeight);
+     const canvasWidth = canvas.width;
+     const canvasHeight = canvas.height;
+     const ratio = Math.min(pdfWidth / canvasWidth, pdfHeight / canvasHeight);
+ 
+     const imgWidth = canvasWidth * ratio;
+     const imgHeight = canvasHeight * ratio;
 
-    const imgWidth = canvasWidth * ratio;
-    const imgHeight = canvasHeight * ratio;
+    const marginLeft = (pdfWidth - imgWidth) / 2;
+    const marginTop = (pdfHeight - imgHeight) / 2;
 
-    const marginLeft = (pdfWidth - imgWidth) / 5;
-    const marginTop = (pdfHeight - imgHeight) / 5;
-
-    pdf.addImage(imgData, 'PNG', marginLeft, marginTop, imgWidth, imgHeight);
+    pdf.addImage(imgData, 'JPEG', marginLeft, marginTop, imgWidth, imgHeight);
 
     return pdf;
-
-
   }
-
-
-
 }
 
 
