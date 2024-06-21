@@ -75,7 +75,7 @@ export class FormatoAltasComponent {
   }
 
   private loadCSS() {
-    this.http.get('/assets/formatos/altaEmpleados/formatoAlta.css', { responseType: 'text' }).subscribe(data => {
+    this.http.get('/assets/formatos/altaEmpleados/estilosAltas.css', { responseType: 'text' }).subscribe(data => {
       this.AltaEmpleadoCSS = data;
       console.log("Archivo de estilos cargado");
     })
@@ -104,9 +104,9 @@ export class FormatoAltasComponent {
 
   async generatePDF() {
     const pdf = await this.createPDF();
-    pdf?.save("formato.pdf");
-    this.location.go(this.location.path());
-    window.location.reload();
+    pdf?.save("Informacion - altas.pdf");
+    // this.location.go(this.location.path());
+    // window.location.reload();
   }
 
   async previewPDF() {
@@ -115,8 +115,6 @@ export class FormatoAltasComponent {
     const iframe = this.el.nativeElement.querySelector('#pdfPreviewIframe');
     iframe.src = pdfData;
   }
-
-
 
   async createPDF() {
 
@@ -175,14 +173,17 @@ export class FormatoAltasComponent {
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
 
+    const canvasWidthMM = canvas.width / 96; // 96 PPI es el estándar de los monitores
+    const canvasHeightMM = canvas.height / 96;
 
     // Redimensionar la imagen para que se ajuste al tamaño de la página del PDF y centrarla
      const canvasWidth = canvas.width;
      const canvasHeight = canvas.height;
-     const ratio = Math.min(pdfWidth / canvasWidth, pdfHeight / canvasHeight);
+     
+     const ratio = Math.min(pdfWidth / canvasWidthMM, pdfHeight / canvasHeightMM);
  
-     const imgWidth = canvasWidth * ratio;
-     const imgHeight = canvasHeight * ratio;
+     const imgWidth = canvasWidthMM * ratio;
+     const imgHeight = canvasHeightMM * ratio;
 
     const marginLeft = (pdfWidth - imgWidth) / 2;
     const marginTop = (pdfHeight - imgHeight) / 2;
