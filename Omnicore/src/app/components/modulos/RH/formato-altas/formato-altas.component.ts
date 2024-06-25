@@ -105,8 +105,8 @@ export class FormatoAltasComponent {
   async generatePDF() {
     const pdf = await this.createPDF();
     pdf?.save("Informacion - altas.pdf");
-    // this.location.go(this.location.path());
-    // window.location.reload();
+    this.location.go(this.location.path());
+    window.location.reload();
   }
 
   async previewPDF() {
@@ -192,6 +192,7 @@ export class FormatoAltasComponent {
 
     return pdf;
   }
+
 }
 
 
