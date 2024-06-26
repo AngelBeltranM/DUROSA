@@ -102,19 +102,6 @@ export class FormatoAltasComponent {
     return `${day}/${month}/${year}`;
   }
 
-  async generatePDF() {
-    const pdf = await this.createPDF();
-    pdf?.save("Informacion - altas.pdf");
-    this.location.go(this.location.path());
-    window.location.reload();
-  }
-
-  async previewPDF() {
-    const pdf = await this.createPDF();
-    const pdfData = pdf?.output('datauristring');
-    const iframe = this.el.nativeElement.querySelector('#pdfPreviewIframe');
-    iframe.src = pdfData;
-  }
 
   async createPDF() {
 
@@ -192,6 +179,21 @@ export class FormatoAltasComponent {
 
     return pdf;
   }
+
+  async generatePDF() {
+    const pdf = await this.createPDF();
+    pdf?.save("Informacion - altas.pdf");
+    this.location.go(this.location.path());
+    window.location.reload();
+  }
+
+  async previewPDF() {
+    const pdf = await this.createPDF();
+    const pdfData = pdf?.output('datauristring');
+    const iframe = this.el.nativeElement.querySelector('#pdfPreviewIframe');
+    iframe.src = pdfData;
+  }
+
 
 }
 

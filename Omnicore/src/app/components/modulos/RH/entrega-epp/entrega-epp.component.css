@@ -53,3 +53,9 @@
     cursor: pointer;
 }
 
+.btn-container {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}

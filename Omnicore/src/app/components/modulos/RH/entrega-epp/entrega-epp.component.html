@@ -2,143 +2,203 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
-    <div class="container border p-4 mt-5 ">
-        <div class="header mb-4">
-            <div class="">
-                <img src="../assets/img/durosa.png" alt="Logo Durosa" class="logo">
-            </div>
-            <h1>ENTREGA DE EPP</h1>
+
+<div class="container border p-4 mt-5 ">
+    <div class="header mb-4">
+        <div class="">
+            <img src="../assets/img/durosa.png" alt="Logo Durosa" class="logo">
         </div>
-        <form>
-            <div class="form-group">
-               <h4>Motivo de entrega:</h4>
+        <h1>ENTREGA DE EPP</h1>
+    </div>
+    <form [formGroup]="form">
+        <div class="form-group">
+            <h4>Motivo de entrega:</h4>
 
-                <div class="d-flex justify-content-start">
+            <div class="d-flex justify-content-start">
 
-                    <div class="form-check" style="margin-right: 10px;">
-                        <input class="form-check-input" type="checkbox" id="nuevoIngreso">
-                        <label class="form-check-label" for="nuevoIngreso">Nuevo Ingreso</label>
-                    </div>
-                    <div class="form-check" style="margin-right: 10px;">
-                        <input class="form-check-input" type="checkbox" id="planta">
-                        <label class="form-check-label" for="planta">Planta</label>
-                    </div>
-                    <div class="form-check" style="margin-right: 10px;">
-                        <input class="form-check-input" type="checkbox" id="anual">
-                        <label class="form-check-label" for="anual">Anual</label>
-                    </div>
-                    <div class="form-check" style="margin-right: 10px;">
-                        <input class="form-check-input" type="checkbox" id="reposicion">
-                        <label class="form-check-label" for="reposicion">Reposición</label>
-                    </div>
+                <div class="form-check" style="margin-right: 10px;">
+                    <input class="form-check-input" type="radio" id="nuevoIngreso" name="inlineRadioOptions"
+                        formControlName="Nuevo_ingreso">
+                    <label class="form-check-label" for="nuevoIngreso">Nuevo Ingreso</label>
                 </div>
+                <div class="form-check" style="margin-right: 10px;">
+                    <input class="form-check-input" type="radio" id="planta" name="inlineRadioOptions"
+                        formControlName="Planta">
+                    <label class="form-check-label" for="planta">Planta</label>
+                </div>
+                <div class="form-check" style="margin-right: 10px;">
+                    <input class="form-check-input" type="radio" id="anual" name="inlineRadioOptions"
+                        formControlName="Anual">
+                    <label class="form-check-label" for="anual">Anual</label>
+                </div>
+                <div class="form-check" style="margin-right: 10px;">
+                    <input class="form-check-input" type="radio" id="reposicion" name="inlineRadioOptions"
+                        formControlName="Reposicion">
+                    <label class="form-check-label" for="reposicion">Reposición</label>
+                </div>
+
             </div>
+        </div>
 
 
-            <div>
-                <label>Se entrega EPP dañado se valida su condición para reposición:</label>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="si">
+        <div>
+
+            <div class="d-flex justify-content-start">
+
+                <label>Se entrega EPP dañado se valida su condición para reposición: </label>
+
+
+                <div class="form-check form-check-inline ml-2">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="si" formControlName="Si">
                     <label class="form-check-label" for="si">Si</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="no">
-                    <label class="form-check-label" for="no">No</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="no" formControlName="No">
+                    <label class="form-check-label" for="no">no</label>
                 </div>
+            </div>
+        </div>
+
+        <!-- este es el que se llena -->
+        <div class="row">
+            <h4>EPP Entregado</h4>
+            <p> (Coloque la talla en los artículos que apliquen):</p>
+            <div class="col-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="camisolaLigeraCheck" formControlName="Cam_ligera" >
+                    <label class="form-check-label" for="camisolaLigeraCheck">Camisola ligera: </label>
+                </div>
+                <input type="text" class="form-control mt-1" id="camisolaLigera" formControlName="Res_camisaL">
+            </div>
+            <div class="col-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="camisolaGruesaCheck" formControlName="Cam_gruesa" >
+                    <label class="form-check-label" for="camisolaGruesaCheck">Camisola gruesa: </label>
+                </div>
+                <input type="text" class="form-control mt-1" id="camisolaGruesa" formControlName="Res_camisaG">
             </div>
 
 
-            <div class="mt-3">
-                <h4>EPP Entregado</h4><p> (Coloque la talla en los artículos que apliquen):</p>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label for="camisolaLigera">Camisola ligera</label>
-                        <input type="text" class="form-control" id="camisolaLigera">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="camisolaGruesa">Camisola gruesa</label>
-                        <input type="text" class="form-control" id="camisolaGruesa">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="zapatos">Zapatos</label>
-                        <input type="text" class="form-control" id="zapatos">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="lentes">Lentes</label>
-                        <input type="text" class="form-control" id="lentes">
-                    </div>
+            <div class="col-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="zapatosCheck" formControlName="Zapatos">
+                    <label class="form-check-label" for="zapatosCheck" >Zapatos: </label>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-md-3">
-                        <label for="pantalon">Pantalón</label>
-                        <input type="text" class="form-control" id="pantalon">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="guantes">Guantes</label>
-                        <input type="text" class="form-control" id="guantes">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="camiseta">Camiseta</label>
-                        <input type="text" class="form-control" id="camiseta">
-                    </div>
-                    <div class="col-md-3">
-                        <label for="chaleco">Chaleco de Identificación</label>
-                        <input type="text" class="form-control" id="chaleco">
-                    </div>
-                </div>
+                <input type="text" class="form-control mt-1" id="zapatos" formControlName="Res_Zapato">
             </div>
 
-        </form>
 
-        <!-- no se rellena -->
+            <div class="col-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lentesCheck" formControlName="Lentes">
+                    <label class="form-check-label" for="lentesCheck">Lentes:</label>
+                </div>
+                <input type="text" class="form-control mt-1" id="lentes" formControlName="Res_lentes">
+            </div>
 
-        <div class="mt-3">
-            <h4>Políticas de uso de EPP</h4>
-            <div>
-                <li>El Colaborador se compromete a portar el uniforme y EPP diariamente durante sus actividades.
-                </li>
-                <li>La renovación de EPP es de forma anual para zapatos, semestral para camisolas y a requerimiento
-                    de uso el resto del EPP.</li>
-                <li>Para el personal de Nuevo Ingreso se entregará 1 juego de EPP de acuerdo a su puesto y a los 3
-                    meses un 2do juego.</li>
-                <li>En caso de ser baja y tener menos de 4 meses que se entregó el EPP, se regresa o se realizará el
-                    descuento correspondiente en el finiquito.</li>
-                <li>En caso de requerir reposición por daño, deberá presentar el artículo para hacer el cambio.</li>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-3">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pantalonCheck" formControlName="Pantalon">
+                    <label class="form-check-label" for="pantalonCheck">Pantalón:</label>
+
+                </div>
+                <input type="text" class="form-control mt-1" id="pantalon" formControlName="Res_pantalon" >
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="guantesCheck" formControlName="Guantes">
+                    <label class="form-check-label" for="guantesCheck">Guantes: </label>
+
+                </div>
+                <input type="text" class="form-control mt-1" id="guantes" formControlName="Res_guantes">
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="camisetaCheck" formControlName="Camiseta" >
+                    <label class="form-check-label" for="camisetaCheck">Camiseta: </label>
+
+                </div>
+                <input type="text" class="form-control mt-1" id="camiseta" formControlName="Res_camiseta">
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="chalecoCheck" formControlName="Chaleco_id">
+                    <label class="form-check-label" for="chalecoCheck">Chaleco de Identificación: </label>
+
+                </div>
+                <input type="text" class="form-control mt-1" id="chaleco" formControlName="Res_chaleco">
             </div>
         </div>
 
 
-        <div class="mt-4">
-            <h4>Firma de recibido</h4>
+    </form>
 
-            <div class="row mt-1">
-                <div class="col-md-4">
-                    <label for="numeroEmpleado">Número de Empleado: </label>
+    <!-- no se rellena -->
 
-                </div>
-                <div class="col-md-4">
-                    <label for="nombre">Nombre del empleado: </label>
-
-                </div>
-                <div class="col-md-4">
-                    <label for="firma">Firma de recibido: </label>
-                </div>
-            </div>
+    <div class="mt-3">
+        <h4>Políticas de uso de EPP</h4>
+        <div>
+            <li>El Colaborador se compromete a portar el uniforme y EPP diariamente durante sus actividades.
+            </li>
+            <li>La renovación de EPP es de forma anual para zapatos, semestral para camisolas y a requerimiento
+                de uso el resto del EPP.</li>
+            <li>Para el personal de Nuevo Ingreso se entregará 1 juego de EPP de acuerdo a su puesto y a los 3
+                meses un 2do juego.</li>
+            <li>En caso de ser baja y tener menos de 4 meses que se entregó el EPP, se regresa o se realizará el
+                descuento correspondiente en el finiquito.</li>
+            <li>En caso de requerir reposición por daño, deberá presentar el artículo para hacer el cambio.</li>
         </div>
-        <br> <br>
-        <div class="form-group row">
-            <div class="col-md-6">
-                <label for="entrega">Entrega:</label>
-
-            </div>
-            <div class="col-md-6">
-                <label for="fecha">Fecha: </label>
-
-            </div>
-        </div>
-
     </div>
+
+
+    <div class="mt-4">
+        <h4>Firma de recibido</h4>
+
+        <div class="row mt-1">
+            <div class="col-md-4">
+                <label for="numeroEmpleado">Número de Empleado: </label>
+
+            </div>
+            <div class="col-md-4">
+                <label for="nombre">Nombre del empleado: </label>
+
+            </div>
+            <div class="col-md-4">
+                <label for="firma">Firma de recibido: </label>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="entrega">Entrega:</label>
+
+        </div>
+        <div class="col-md-6">
+            <label for="fecha">Fecha: </label>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="btn-container p-5">
+    <button (click)="generatePdf()" type="submit" class="btn btn-success" style="width: 250px; height: 50px;">
+        Generar PDF
+    </button>
+</div>
+
+<div class="mt-5"></div>
 
 
 <!-- botones de acciones -->
