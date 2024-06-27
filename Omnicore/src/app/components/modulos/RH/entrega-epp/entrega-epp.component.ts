@@ -16,14 +16,16 @@ entregaeppHTML?: string;
 entregaeppCSS?: string;
 currentDate?: string;
 form: FormGroup;
+img: string = '../assets/img/durosa.png'
 
   constructor(private fb: FormBuilder ,private http: HttpClient, private router: Router, private location: Location, private renderer: Renderer2, private el: ElementRef ) {
+   
+
     this.form = this.fb.group({ 
 
-      Nuevo_Ingreso: [false],
-      Planta: [false],
-      Anual: [false],
-      Reposicion: [false],
+      Motivo: [''],
+
+      Condicion: [''],
 
       Si: [false],
       No: [false],
@@ -103,12 +105,14 @@ form: FormGroup;
 
     const filledHTML = this.entregaeppHTML
     
-    .replace('{{Nuevo Ingreso}}', this.form.value.Nuevo_Ingreso ? 'Nuevo ingreso': '')
-    .replace('{{Planta}}', this.form.value.Planta ? 'Planta' : '')
-    .replace('{{Anual}}', this.form.value.Anual ? 'Anual': '')
-    .replace('{{Reposicion}}', this.form.value.Reposicion ? 'Reposición': '')
-    .replace('{{Si}}', this.form.value.Si ? 'Si': '')
-    .replace('{{No}}', this.form.value.No ? 'No' : '')
+    .replace('{{Nuevo Ingreso}}', this.form.value.Motivo === 'option1' ?  'Nuevo Ingreso': '')
+    .replace('{{Planta}}', this.form.value.Motivo === 'option2' ? 'Planta' : '')
+    .replace('{{Anual}}', this.form.value.Motivo === 'option3' ?  'Anual': '')
+    .replace('{{Reposicion}}', this.form.value.Motivo === 'option4' ? 'Reposición': '')
+
+
+    .replace('{{Si}}', this.form.value.Condicion === 'Option1' ? 'Si' : '')
+    .replace('{{No}}', this.form.value.Condicion === 'Option2' ? 'No': '')
     
     .replace('{{Cam_ligera}}', this.form.value.Cam_ligera ? 'Aplica' : 'No Aplica')
     .replace('{{Res_camisaL}}', this.form.value.Res_camisaL)
@@ -132,7 +136,8 @@ form: FormGroup;
     .replace('{{Res_camiseta}}',this.form.value.Res_camiseta)
 
     .replace('{{Chaleco_id}}',this.form.value.Chaleco_id ? 'Aplica': 'No Aplica')
-    .replace('{{Res_chaleco}}',this.form.value.Res_chaleco);
+    .replace('{{Res_chaleco}}',this.form.value.Res_chaleco)
+    .replace('{{logoUrl}}', this.img);
 
     const pdfContent = document.createElement('div');
     pdfContent.innerHTML = filledHTML;
@@ -167,7 +172,9 @@ form: FormGroup;
      const imgHeight = canvasHeightMM * ratio;
 
     const marginLeft = (pdfWidth - imgWidth) / 2;
-    const marginTop = (pdfHeight - imgHeight) / 2;
+    //const marginTop = (pdfHeight - imgHeight) / 2;
+
+    const marginTop = 10 / pdf.internal.scaleFactor;
 
     pdf.addImage(imgData, 'JPEG', marginLeft, marginTop, imgWidth, imgHeight);
 
