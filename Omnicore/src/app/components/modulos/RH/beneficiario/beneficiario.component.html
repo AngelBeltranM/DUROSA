@@ -1,0 +1,149 @@
+<div class="container border p-4 mt-5 ">
+    <form>
+        <p class="font-weight text-justify">
+            Addendum al <b>CONTRATO INDIVIDUAL DE TRABAJO POR TIEMPO INDETERMINADO CON PERIODO DE PRUEBA</b> que por una
+            parte celebran la empresa <b>DUROSA, S.A. DE C.V.</b> representada en este acto por el SR. <b><u><input
+                        type="text" class="form-control form-control-sm d-inline-block" style="width: auto;"
+                        placeholder="Nombre del Sr."></u></b> y por la otra por su propio derecho el SR. <b><u><input
+                        type="text" class="form-control form-control-sm d-inline-block" style="width: auto;"
+                        placeholder="Nombre del Sr."></u></b> a quienes en lo sucesivo se le denominará en el presente
+            Addendum, respectivamente, como “EL PATRÓN” y “EL TRABAJADOR”, los cuales convienen sujetarlo al tenor el
+            siguiente:
+        </p>
+        <p class="text-justify">
+            El presente Addendum se genera para cumplir con el <b>Artículo 25 de la Ley Federal de Trabajo</b>, en su
+            apartado número X, y al efecto “EL TRABAJADOR” designará en términos del artículo 501 de la citada Ley, como
+            beneficiarias para el pago de los salarios y prestaciones devengadas y/o no cobradas y/o que se generen en
+            caso
+            de que sobrevenga su muerte, o su desaparición derivada de un acto delincuencial, a las siguientes personas:
+        </p>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre del Beneficiario</th>
+                    <th>Parentesco</th>
+                    <th>% Porcentaje</th>
+                    <th>Domicilio Actual</th>
+                    <th>Celular o Tel Casa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="beneficiario1" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="parentesco1" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="porcentaje1" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="domicilio1" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="telefono1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="beneficiario2" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="parentesco2" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="porcentaje2" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="domicilio2" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="telefono2" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="beneficiario3" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="parentesco3" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="porcentaje3" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="domicilio3" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" name="telefono3" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+
+    <p class="text-justify">
+        A falta de alguna de las personas anteriormente señaladas, la parte proporcional que le corresponda a la
+        faltante quedará en beneficio del resto de las demás personas designadas, quienes recibirán la misma en la
+        proporción que les haya sido designada.
+    </p>
+    <p class="text-justify">
+        A falta de alguna de la totalidad de las personas anteriormente señaladas, para el pago de los salarios y
+        prestaciones devengadas y no cobradas y/o que se generen en caso de que sobrevenga su muerte, o su desaparición
+        derivada de un acto delincuencial, se estará a la resolución de que se dicte la Autoridad Laboral Jurisdiccional
+        que conforme a la Ley le corresponda declarar como beneficiarios.
+    </p>
+    <p class="text-justify">
+        Leído lo anterior y por así convenir a los intereses de las partes, lo firman de conformidad para constancia,
+        ante los testigos que al alcance suscriben, en la Ciudad de Monterrey, Nuevo León, el día
+    <p id="currentDate"></p>.
+    <div class="signature-section row">
+        <div class="col-md-4 text-center">
+            <p>_____________________________</p>
+            <p>POR LA EMPRESA</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <p>_____________________________</p>
+            <p>EL TRABAJADOR</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <p>_____________________________</p>
+            <p>RECURSOS HUMANOS</p>
+        </div>
+    </div>
+    <div class="text-center">
+        <p>Testigos.-</p>
+    </div>
+    <div class="signature-section row">
+        <div class="col-md-6 text-center">
+            <p>_____________________________</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <p>_____________________________</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+<!-- botones de acciones -->
+<div class="btn-regresar">
+    <button routerLink="/app-rh" class="btn btn-outline-dark"><i
+            class="fa-solid fa-right-from-bracket fa-rotate-180"></i>
+        Regresar </button>
+</div>
+
+<div class="btn-inicio">
+    <button (click)="regresar()" class=" btn btn-outline-dark">
+        ir al inicio
+        <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+</div>

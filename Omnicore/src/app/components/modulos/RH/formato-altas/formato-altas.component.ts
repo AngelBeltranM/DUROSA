@@ -164,13 +164,13 @@ export class FormatoAltasComponent {
     const canvasHeightMM = canvas.height / 96;
 
     // Redimensionar la imagen para que se ajuste al tamaño de la página del PDF y centrarla
-     const canvasWidth = canvas.width;
-     const canvasHeight = canvas.height;
-     
-     const ratio = Math.min(pdfWidth / canvasWidthMM, pdfHeight / canvasHeightMM);
- 
-     const imgWidth = canvasWidthMM * ratio;
-     const imgHeight = canvasHeightMM * ratio;
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
+
+    const ratio = Math.min(pdfWidth / canvasWidthMM, pdfHeight / canvasHeightMM);
+
+    const imgWidth = canvasWidthMM * ratio;
+    const imgHeight = canvasHeightMM * ratio;
 
     const marginLeft = (pdfWidth - imgWidth) / 2;
     const marginTop = (pdfHeight - imgHeight) / 2;

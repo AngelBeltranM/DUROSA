@@ -11,6 +11,7 @@ import { EditUserComponent } from './components/modulos/usuarios/edit-user/edit-
 import { RhComponent } from './components/modulos/RH/rh/rh.component';
 import { FormatoAltasComponent } from './components/modulos/RH/formato-altas/formato-altas.component';
 import { EntregaEppComponent } from './components/modulos/RH/entrega-epp/entrega-epp.component';
+import { BeneficiarioComponent } from './components/modulos/RH/beneficiario/beneficiario.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'edit-user/:id', component: EditUserComponent, canActivate: [authadminGuard]},
   { path: 'app-rh', component: RhComponent },
   { path: 'formato', component: FormatoAltasComponent}, 
-  { path: 'entrega-epp', component:EntregaEppComponent}
+  { path: 'entrega-epp', component:EntregaEppComponent},
+  { path:'Beneficiario', component: BeneficiarioComponent}
 ];
 
 @NgModule({

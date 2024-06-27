@@ -17,6 +17,7 @@ import { EditUserComponent } from './components/modulos/usuarios/edit-user/edit-
 import { RhComponent } from './components/modulos/RH/rh/rh.component';
 import { FormatoAltasComponent } from './components/modulos/RH/formato-altas/formato-altas.component';
 import { EntregaEppComponent } from './components/modulos/RH/entrega-epp/entrega-epp.component';
+import { BeneficiarioComponent } from './components/modulos/RH/beneficiario/beneficiario.component';
 
 
 
@@ -32,7 +33,8 @@ import { EntregaEppComponent } from './components/modulos/RH/entrega-epp/entrega
     MenuAdminComponent,
     RhComponent,
     FormatoAltasComponent,
-    EntregaEppComponent
+    EntregaEppComponent,
+    BeneficiarioComponent
   ],
   imports: [
     BrowserModule,

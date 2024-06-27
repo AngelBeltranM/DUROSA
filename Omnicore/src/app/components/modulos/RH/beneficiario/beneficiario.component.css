@@ -1,0 +1,21 @@
+.btn-regresar {
+    position: fixed;
+    bottom: 10px;
+    /* distancia desde la parte inferior */
+    left: 10px;
+    /* distancia desde la parte izquierda */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-inicio {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
