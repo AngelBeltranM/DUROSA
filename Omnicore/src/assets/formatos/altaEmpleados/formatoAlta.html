@@ -1,0 +1,357 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../altaEmpleados/estilosAltas.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Durosa</title>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <section class="light">
+        <div class="container py-4">
+            <!--FORMATO DE CONTRATO -->
+            <article>
+                <form class="postcard__text">
+
+                    <div class="position-relative">
+
+                        <div class="position-absolute top-0 start-0 translate-middle"
+                            style="  width: 5px; height: 5px;">
+                            <img src="https://media.licdn.com/dms/image/C4E0BAQFTF9eogmH56Q/company-logo_200_200/0/1671510238094/durosa_logo?e=1725494400&v=beta&t=VzeYbb11e7e5koAYIlmWIGrtScu8J4IfU5bud1Kit6U"
+                                alt="logo" style=" height: 100px; padding-top: 10px;">
+                        </div>
+
+                        <h2 class="text-center blue text-dark">INFORMACION - ALTA </h2>
+
+
+
+                        <div class="position-absolute top-0 start-100 translate-middle time text-dark"
+                            style="padding-right: 125px; padding-top: 50px;" id="current_date">
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+                        <h4 class="text-center text-dark mt-5">DATOS DEL PERSONAL</h4>
+                    </div>
+
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="nombre">Nombre</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{Nombre}}</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="puesto">Puesto</label>
+                                <div class="form-control mx-auto">
+
+                                    <b>{{Puesto}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="direccion">Dirección</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{Dirección}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Telefono_casa">Telefono de casa</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{Telefono_casa}}</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Celular">Numero de celular</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{Celular}}</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Telefono_recados">Telefono recados</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{Telefono_recados}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex">
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="email">Correo</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{email}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="estado_civil">Estado Civil</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{estado_civil}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{fecha_nacimiento}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="clinica">Clinica</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{Clinica}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="imss">IMSS</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{IMSS}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="CURP">CURP</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{CURP}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="RFC">RFC</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{RFC}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="text-center blue text-dark">DATOS FAMILIARES</h4>
+                    <p class="text-dark text-center">Dado caso de no tener hijos, omitir este apartado</p>
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="nombre_hijo1">Nombre del primer hijo</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{nombre_hijo1}}</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Telefono_casa">Fecha de nacimiento</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{fecha_nacimiento1}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="nombre_hijo2">Nombre del segundo hijo</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{nombre_hijo2}} </b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="fecha_nacimiento2">Fecha de nacimiento</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{fecha_nacimiento2}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="nombre_hijo3">Nombre del tercer hijo</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{nombre_hijo3}}</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="fecha_nacimiento3">Fecha de nacimiento</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{fecha_nacimiento3}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="text-center blue text-dark">DATOS INFONAVIT</h4>
+
+                    <div class="d-flex">
+
+                        <div class="p-2  flex-fill">
+                            <label class="form-check-label text-dark" for="inlineRadio1">Descuento:
+                                <b>{{DESCUENTO_in}}</b></label>
+                        </div>
+                        <div class="p-2  flex-fill">
+                            <label class="form-check-label text-dark" for="inlineRadio2">VSM: <b>{{VSM}}</b>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Descuento">Descuento</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{Descuento}}</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="folio">Folio</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{folio}} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="text-center blue text-dark">DATOS DE SALUD Y EMERGENCIA</h4>
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Grupo_Sanguineo">Grupo Sanguineo</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{Grupo_Sanguineo}}</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Alergias">Alergias</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{Alergias}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="Padecimientos">Padecimientos</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{Padecimientos}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h4 class="text-center blue text-dark">DATOS ADICIONALES</h4>
+
+                    <div class="d-flex">
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="talla_playera">Talla de playera</label>
+                                <div class="form-control mx-auto">
+                                    <b> {{talla_playera}}</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="talla_pantalon">Talla pantalon</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{talla_pantalon}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-2  flex-fill">
+                            <div class="form-group text-dark">
+                                <label for="talla_zapatos">Talla zapato</label>
+                                <div class="form-control mx-auto">
+                                    <b>{{talla_zapatos}} </b>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+
+
+</html>

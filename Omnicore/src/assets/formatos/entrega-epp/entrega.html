@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega de EPP</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class=" p-4 mt-5 ">
+        <div class="header mb-4">
+            <div class="">
+                <img src="{{logoUrl}}" alt="Logo Durosa" class="logo">
+            </div>
+            <h1>ENTREGA DE EPP</h1>
+        </div>
+        <form>
+            <div class="form_group">
+ <div class="mt-5"></div>
+                <h4>Motivo de entrega:</h4>
+                <div class="d-flex justify-content-start">
+
+
+                    <div class="form-check" style=" padding-left: 3px;">
+                        <label class="form-check-label" for="nuevoIngreso"> <b> {{Nuevo Ingreso}} </b> </label>
+                    </div>
+                    <div class="form-check" style=" padding-left: 0px;">
+
+                        <label class="form-check-label" for="planta"> <b> {{Planta}} </b> </label>
+                    </div>
+                    <div class="form-check" style=" padding-left: 0px;">
+
+                        <label class="form-check-label" for="anual"> <b>{{Anual}} </b> </label>
+                    </div>
+                    <div class="form-check" style=" padding-left: 0px;">
+
+                        <label class="form-check-label" for="reposicion"> <b> {{Reposicion}} </b> </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+                <label>Se entrega EPP dañado se valida su condición para reposición:</label>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="si"> <b> {{Si}} </b> </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="no"> <b class="ml-0"> {{No}} </b> </label>
+                </div>
+            </div>
+
+
+            <!-- <div class="mt-3">
+                <h4>EPP Entregado</h4><p> (Coloque la talla en los artículos que apliquen):</p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="camisolaLigera">Camisola ligera</label>
+                        <input type="text" class="form-control" id="camisolaLigera">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="camisolaGruesa">Camisola gruesa</label>
+                        <input type="text" class="form-control" id="camisolaGruesa">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="zapatos">Zapatos</label>
+                        <input type="text" class="form-control" id="zapatos">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="lentes">Lentes</label>
+                        <input type="text" class="form-control" id="lentes">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-3">
+                        <label for="pantalon">Pantalón</label>
+                        <input type="text" class="form-control" id="pantalon">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="guantes">Guantes</label>
+                        <input type="text" class="form-control" id="guantes">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="camiseta">Camiseta</label>
+                        <input type="text" class="form-control" id="camiseta">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="chaleco">Chaleco de Identificación</label>
+                        <input type="text" class="form-control" id="chaleco">
+                    </div>
+                </div>
+            </div> -->
+            <h4>EPP Entregado</h4>
+            <p> (Coloque la talla en los artículos que apliquen):</p>
+
+            <!-- este es el que se llena -->
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <label class="form-check-label" for="camisolaLigeraCheck">Camisola ligera: <b>
+                                {{Cam_ligera}}</b>
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="camisolaLigera"> <b>{{Res_camisaL}} </b> </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <label class="form-check-label" for="camisolaGruesaCheck">Camisola gruesa: <b> {{Cam_gruesa}}
+                            </b>
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="camisola_gruesa"> <b> {{Res_camisaG}} </b> </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <label class="form-check-label" for="zapatosCheck">Zapatos: <b> {{Zapatos}} </b> </label>
+                    </div>
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="lentes"> <b> {{Res_Zapatos}} </b> </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <label class="form-check-label" for="lentesCheck">Lentes: <b> {{Lentes}} </b> </label>
+                    </div>
+
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="lentes"> <b> {{Res_lentes}} </b> </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-3">
+
+                    <div class="form-check">
+                        <label class="form-check-label" for="pantalonCheck">Pantalón: <b> {{Pantalon}} </b> </label>
+                    </div>
+
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="pantalon"> <b> {{Res_Pantalon}} </b> </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <label class="form-check-label" for="guantesCheck">Guantes: <b> {{Guantes}} </b> </label>
+                    </div>
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="guantes"> <b> {{Res_guantes}} </b> </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <label class="form-check-label" for="camisetaCheck">Camiseta: <b> {{Camiseta}} </b> </label>
+                    </div>
+
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="camiseta"> <b> {{Res_camiseta}} </b> </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <label class="form-check-label" for="chalecoCheck">Chaleco de Identificación: <b> {{Chaleco_id}}
+                            </b> </label>
+                    </div>
+                    <div class="mt-2">
+                        <div class=" form-control mt-2 ml-3" id="chaleco"> <b> {{Res_chaleco}} </b> </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+        <!-- no se rellena -->
+
+        <div class="mt-3">
+            <h4>Políticas de uso de EPP</h4>
+            <div>
+                <li>El Colaborador se compromete a portar el uniforme y EPP diariamente durante sus actividades.
+                </li>
+                <li>La renovación de EPP es de forma anual para zapatos, semestral para camisolas y a requerimiento
+                    de uso el resto del EPP.</li>
+                <li>Para el personal de Nuevo Ingreso se entregará 1 juego de EPP de acuerdo a su puesto y a los 3
+                    meses un 2do juego.</li>
+                <li>En caso de ser baja y tener menos de 4 meses que se entregó el EPP, se regresa o se realizará el
+                    descuento correspondiente en el finiquito.</li>
+                <li>En caso de requerir reposición por daño, deberá presentar el artículo para hacer el cambio.</li>
+            </div>
+        </div>
+
+
+        <div class="mt-5 center">
+            <h4 class="text-center">Firma de recibido</h4>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+              <div class="col">Número de Empleado: <b>____________________</b></div>
+              <div class="col">Nombre del empleado: <b> ___________________________ </b></div>
+              <div class="w-100"> <br></div>
+              <div class="col">Entrega:<b> ________________________________ </b> </div>
+              <div class="col">Fecha:<b> ___________________________________ </b></div>
+            </div>
+          </div>
+    
+        <div class="form-group row">
+            <div class="col align-self-start">
+            </div>
+            <div class="col align-self-center">
+                <label for="firma"><b>__________________________________________________________</b></label>
+                <p class="text-center"> Firma de recibido </p>
+            </div>
+            <div class="col align-self-end">
+            </div>
+        </div>
+
+
+        <!-- 
+        <div class="container">
+            <div class="row">
+                <div class="col align-self-start">
+ 
+                </div>
+
+                <div class="col align-self-center">
+
+                </div>
+
+                <div class="col align-self-end">
+ 
+                </div>
+            </div>
+        </div> -->
+
+
+    </div>
+
+
+
+
+    <div class="mt-5"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+<style>
+    .logo {
+        max-width: 100px;
+
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 24px;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .header .logo {
+        position: absolute;
+        right: 0;
+    }
+
+    .form-control {
+        width: auto;
+        display: inline;
+    }
+
+    .form-group {
+        margin-top: 70px;
+    }
+</style>
